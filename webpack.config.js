@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 const config = {
+  mode: "development",
   entry: {
     app: './src/index.js',
   },
@@ -18,7 +19,6 @@ const config = {
         exclude: /node_modules/,
         use: [{
           loader: "babel-loader",
-          options: { presets: ["react","es2015"] }
         }],
       },
 
