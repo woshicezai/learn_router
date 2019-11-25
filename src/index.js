@@ -8,7 +8,6 @@ import {
     useParams,
     useRouteMatch
 } from "react-router-dom";
-import LoadLazy from "./components/loadsuccessLazy";
 
 function NestingExample() {
     return (
@@ -72,9 +71,6 @@ function Topics() {
                 <li>
                     <Link to={`${path}/props-v-state`}>Props v. State</Link>
                 </li>
-                <li>
-                    <Link to={`${path}/lazy`}>Lazy</Link>
-                </li>
             </ul>
 
             <Switch>
@@ -99,9 +95,6 @@ function Topic() {
     return (
         <div>
             <h3>{topicId}</h3>
-            {
-                topicId === "lazy" && <LoadLazy/>
-            }
         </div>
     );
 }
